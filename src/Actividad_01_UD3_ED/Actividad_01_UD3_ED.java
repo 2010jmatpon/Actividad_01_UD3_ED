@@ -21,12 +21,21 @@ public class Actividad_01_UD3_ED
     private static FileInputStream flujoEntrada = null;
     private static BufferedInputStream buferEntrada = null;
 
+    /**
+     *
+     * @throws FileNotFoundException 
+     */
     public static void inicializarArchivos() throws FileNotFoundException
     {
         setFlujoEntrada(new FileInputStream(getNombreArchivo()));
         setBuferEntrada(new BufferedInputStream(getFlujoEntrada()));
     }
     
+    /**
+     *
+     * @return devuelve el total
+     * @throws IOException
+     */
     public static int mostrarArchivoDeTexto() throws IOException
     {
         int total = 0;
@@ -75,56 +84,56 @@ public class Actividad_01_UD3_ED
     }
 
     /**
-     * @return the bufer
+     * @return Devuelve el bufer
      */
     public static byte[] getBufer() {
         return bufer;
     }
 
     /**
-     * @param aBufer the bufer to set
+     * @param aBufer es el bufer a iniciar
      */
     public static void setBufer(byte[] aBufer) {
         bufer = aBufer;
     }
 
     /**
-     * @return the nombreArchivo
+     * @return Devuelve el nombre del archivo
      */
     public static String getNombreArchivo() {
         return nombreArchivo;
     }
 
     /**
-     * @param aNombreArchivo the nombreArchivo to set
+     * @param aNombreArchivo Es el nombre del archivo a iniciar
      */
     public static void setNombreArchivo(String aNombreArchivo) {
         nombreArchivo = aNombreArchivo;
     }
 
     /**
-     * @return the flujoEntrada
+     * @return Devuelve el flujoEntrada
      */
     public static FileInputStream getFlujoEntrada() {
         return flujoEntrada;
     }
 
     /**
-     * @param aFlujoEntrada the flujoEntrada to set
+     * @param aFlujoEntrada Es el flujoEntrada a iniciar
      */
     public static void setFlujoEntrada(FileInputStream aFlujoEntrada) {
         flujoEntrada = aFlujoEntrada;
     }
 
     /**
-     * @return the buferEntrada
+     * @return Devuelve buferEntrada
      */
     public static BufferedInputStream getBuferEntrada() {
         return buferEntrada;
     }
 
     /**
-     * @param aBuferEntrada the buferEntrada to set
+     * @param aBuferEntrada Es el buferEntrada a iniciar
      */
     public static void setBuferEntrada(BufferedInputStream aBuferEntrada) {
         buferEntrada = aBuferEntrada;
